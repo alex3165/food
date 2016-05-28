@@ -2,8 +2,12 @@ import json
 import sys
 import uuid
 
+from pathlib import Path
+
 from pprint import pprint
 from random import randint
+
+FILE_PATH = str(Path("data_food.json").resolve())
 
 def commands():
   for com in ALL_COMMANDS:
@@ -22,7 +26,7 @@ def addElement(data):
     'type': typee
     }
 
-    with open('data.json', 'w') as outfile:
+    with open(FILE_PATH, 'w') as outfile:
       json.dump(data, outfile)
 
 def getList(data):
@@ -67,7 +71,7 @@ ALL_COMMANDS = [{
 }]
 
 def main():
-  with open('data.json') as data_file:
+  with open(FILE_PATH) as data_file:
     data = json.load(data_file)
 
   if(len(sys.argv) > 1):
