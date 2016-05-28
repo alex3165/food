@@ -1,0 +1,36 @@
+{
+  "options": {
+    "06c6dcd436d8479c970c676b2aa7adc9": {
+      "type": "Burger",
+      "name": "Patty and bun"
+    },
+    "610ecf3388634480a0b0321a5ec63e06": {
+      "type": "Healthy",
+      "name": "Foodtruck liverpool street"
+    },
+    "3abb0243be174714b639ef2398a72e86": {
+      "type": "Pizza",
+      "name": "Franco manca"
+    },
+    "944f0956f8ec4c4590e4ba6a274daed2": {
+      "type": "Burger",
+      "name": "Burger market"
+    },
+    "bc158182c9604c52833f1a1e2dfa84c9": {
+      "type": "Mexican",
+      "name": "Chillango"
+    },
+    "17bff39e64ec44edb0f32e1f0bfb4d02": {
+      "type": "Sandwiches",
+      "name": "PRET"
+    },
+    "2069db5c262c424fb141a92c4e53d58c": {
+      "type": "Japanese",
+      "name": "K10"
+    },
+    "e5789e8553af4222805d28f92eaed1e8": {
+      "type": "Asiatic",
+      "name": "Katsu curry market"
+    }
+  }
+}
