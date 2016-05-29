@@ -1,13 +1,12 @@
 import json
 import sys
 import uuid
-
-from pathlib import Path
+import os
 
 from pprint import pprint
 from random import randint
 
-FILE_PATH = str(Path("data_food.json").resolve())
+FILE_PATH = os.path.abspath('Development/food/data_food.json')
 
 def commands():
   for com in ALL_COMMANDS:
