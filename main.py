@@ -6,7 +6,7 @@ import os
 from pprint import pprint
 from random import randint
 
-FILE_PATH = os.path.abspath('Development/food/data_food.json')
+FILE_PATH = os.path.expanduser('~/Development/food/data_food.json')
 
 def commands():
   for com in ALL_COMMANDS:
@@ -28,9 +28,20 @@ def addElement(data):
     with open(FILE_PATH, 'w') as outfile:
       json.dump(data, outfile)
 
+def removeElement(data):
+  if len(sys.argv) < 3:
+    pprint('Please add the id');
+  else:
+    identifier = sys.argv[2]
+
+    del data["options"][identifier]
+    with open(FILE_PATH, 'w') as outfile:
+      json.dump(data, outfile)
+    
+
 def getList(data):
   for key, value in data['options'].items():
-    print('Today you can eat {0} at {1}'.format(value['type'], value['name']))
+    print('Today you can eat {0} at {1}, id: [{2}]'.format(value['type'], value['name'], key))
 
 
 def random(data):
@@ -57,6 +68,11 @@ ALL_COMMANDS = [{
   'name': 'add',
   'method': addElement,
   'description': 'Add a new food option, take 2 parameters: [place_name] [food_type]'
+},
+{
+  'name': 'rm',
+  'method': removeElement,
+  'description': 'Remove a food option by name'
 },
 {
   'name': 'help',
