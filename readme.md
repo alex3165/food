@@ -10,6 +10,7 @@ Only work with python 3.
 
 - list : List all the possible options
 - add : Add a new food option, take 2 parameters: [place_name] [food_type]
+- set : Add a lunch to the history, take 2 parameters: [option_id] [time] (month/day/year)
 - rm : Remove a food option, take 1 parameter : [option_id]
 - help : Food helper
 - random : Pick a place randomly

@@ -2,6 +2,7 @@ import json
 import sys
 import uuid
 import os
+import time
 
 from pprint import pprint
 from random import randint
@@ -24,9 +25,7 @@ def addElement(data):
     'name': name,
     'type': typee
     }
-
-    with open(FILE_PATH, 'w') as outfile:
-      json.dump(data, outfile)
+    save(data)
 
 def removeElement(data):
   if len(sys.argv) < 3:
@@ -35,9 +34,7 @@ def removeElement(data):
     identifier = sys.argv[2]
 
     del data["options"][identifier]
-    with open(FILE_PATH, 'w') as outfile:
-      json.dump(data, outfile)
-    
+    save(data)
 
 def getList(data):
   for key, value in data['options'].items():
@@ -59,6 +56,19 @@ def random(data):
 
   pprint('Today let\'s eat {0} at {1}'.format(choice['type'], choice['name']))
 
+def addHistory(data):
+  if len(sys.argv) < 4:
+    elTime = time.strftime('%x')
+  else:
+    elTime = sys.argv[3]
+
+  data["history"][elTime] = sys.argv[2]
+  save(data)
+
+def save(data):
+  with open(FILE_PATH, 'w') as outfile:
+    json.dump(data, outfile)
+
 ALL_COMMANDS = [{
   'name': 'list',
   'method': getList,
@@ -73,6 +83,11 @@ ALL_COMMANDS = [{
   'name': 'rm',
   'method': removeElement,
   'description': 'Remove a food option by name'
+},
+{
+  'name': 'set',
+  'method': addHistory,
+  'description': 'Add a value to history'
 },
 {
   'name': 'help',
