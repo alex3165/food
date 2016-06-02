@@ -1,39 +1,36 @@
 {
+  "history": {
+    "05/30/16": "17bff39e64ec44edb0f32e1f0bfb4d02",
+    "06/01/16": "610ecf3388634480a0b0321a5ec63e06"
+  },
   "options": {
-    "610ecf3388634480a0b0321a5ec63e06": {
-      "type": "Healthy",
-      "name": "Foodtruck liverpool street"
-    },
-    "17bff39e64ec44edb0f32e1f0bfb4d02": {
-      "type": "Sandwiches",
-      "name": "PRET"
-    },
     "944f0956f8ec4c4590e4ba6a274daed2": {
-      "type": "Burger",
-      "name": "Burger market"
-    },
-    "e5789e8553af4222805d28f92eaed1e8": {
-      "type": "Asiatic",
-      "name": "Katsu curry market"
+      "name": "Burger market",
+      "type": "Burger"
     },
     "2069db5c262c424fb141a92c4e53d58c": {
-      "type": "Japanese",
-      "name": "K10"
+      "name": "K10",
+      "type": "Japanese"
+    },
+    "e5789e8553af4222805d28f92eaed1e8": {
+      "name": "Katsu curry market",
+      "type": "Asiatic"
+    },
+    "17bff39e64ec44edb0f32e1f0bfb4d02": {
+      "name": "PRET",
+      "type": "Sandwiches"
     },
     "3abb0243be174714b639ef2398a72e86": {
-      "type": "Pizza",
-      "name": "Franco manca"
+      "name": "Franco manca",
+      "type": "Pizza"
     },
-    "bc158182c9604c52833f1a1e2dfa84c9": {
-      "type": "Mexican",
-      "name": "Chillango"
+    "610ecf3388634480a0b0321a5ec63e06": {
+      "name": "Foodtruck liverpool street",
+      "type": "Healthy"
     },
     "06c6dcd436d8479c970c676b2aa7adc9": {
-      "type": "Burger",
-      "name": "Patty and bun"
+      "name": "Patty and bun",
+      "type": "Burger"
     }
-  },
-  "history": {
-    "06/01/16": "610ecf3388634480a0b0321a5ec63e06"
   }
 }
